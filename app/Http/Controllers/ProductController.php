@@ -15,7 +15,7 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-    
+             $validatedData = $request->validated();
                $user_id = $request->all()['user']['id'];
                
                 $file = $request->file('image');
@@ -28,7 +28,9 @@ class ProductController extends Controller
                 $product->description = $request->description;
                 $product->price = $request->price;
                 $product->image = $path;
-                $product->save();
+                $product->save($validatedData);
+                return response()->json(['message' => 'Product created successfully!','product' => $product], 201);
+                
                 
     }
 
@@ -43,7 +45,7 @@ class ProductController extends Controller
 
     public function update(ProductRequest $request, Product $product)
     {
-        if ($request->user->id !== $product->user_id) {
+           if ($request->user->id !== $product->user_id) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
       
