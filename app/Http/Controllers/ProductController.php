@@ -15,21 +15,21 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-        $updateData = $request->only([ 'name','description','price','user_id', ]);
-        $file = $request->file('image');
-        $originalName = $file->getClientOriginalName();
-        $path = $file->storeAs('', $originalName, 'public');
-        $updateData['image'] = $path;
-        $product->update($updateData);
-        
-        /* $product = $request->user->products()->create($request->all());
-          return response()->json($product, 201);
-        $profile = new Profile();
-        $profile->name = $request->name;
-        $profile->email = $request->email;
-        $profile->image_path = $request->file('image'); // This will trigger the mutator
-
-        $profile->save();*/
+    
+               $user_id = $request->all()['user']['id'];
+               
+                $file = $request->file('image');
+                $originalName = $file->getClientOriginalName();
+                $path = $file->storeAs('', $originalName, 'public');
+                
+                $product = new Product();
+                $product->user_id = $user_id;
+                $product->name = $request->name;
+                $product->description = $request->description;
+                $product->price = $request->price;
+                $product->image = $path;
+                $product->save();
+                
     }
 
     public function show(Request $request, Product $product)
@@ -46,11 +46,19 @@ class ProductController extends Controller
         if ($request->user->id !== $product->user_id) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
+      
+         $id= $request->user->id ;
+         $updateData = $request->only([ 'name','description','price','user_id', ]);
+         $file = $request->file('image');
+         $originalName = $file->getClientOriginalName();
+         $path = $file->storeAs('', $originalName, 'public');
+         $updateData['image'] = $path;
+         $product->update($updateData);
+         return response()->json(['message' => 'Product updated successfully', 'product' => $product]);
+     
+          }
 
-        $product->update($request->all());
-        return response()->json($product);
-    }
-
+    
     public function destroy(Request $request, Product $product)
     {
         if ($request->user->id !== $product->user_id) {
@@ -58,6 +66,7 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        return response()->json(null, 204);
-    }
+        return response()->json(['message' => 'Product Deleted successfully', 'product' => $product]);
+
+            }
 }

@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "4b22f269-6e1d-4b3f-bc2b-07c5041dc8df",
+		"name": "Api Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36216703"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "get_one_product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/products/24",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"24"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxODIwNjksImV4cCI6MTcxODE4NTY2OSwibmJmIjoxNzE4MTgyMDY5LCJqdGkiOiJTSE90bjMxNktrSVV0dTY0Iiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4VML-jMdU1VlZZotlO2U4SSH58DjMx96ZfNF7DQsIco",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_All_Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/products/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "name34",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "wasf345",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "345",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Eng Mahmoud/Desktop/logo2.jpg"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxODIwNjksImV4cCI6MTcxODE4NTY2OSwibmJmIjoxNzE4MTgyMDY5LCJqdGkiOiJTSE90bjMxNktrSVV0dTY0Iiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.4VML-jMdU1VlZZotlO2U4SSH58DjMx96ZfNF7DQsIco",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "الاسم",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "الوصف",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "55",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"value": "logo.jpg",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "update_name332",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "update_description332",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "332",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Eng Mahmoud/Desktop/logo.jpg"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/products/33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/products/35",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/register?name=test6&email=test6@yahoo.com&password=123456789",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test6"
+								},
+								{
+									"key": "email",
+									"value": "test6@yahoo.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/login?email=test6@yahoo.com&password=123456789",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test6@yahoo.com"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/user-profile?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"user-profile"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/refresh?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxNDIyNTQsImV4cCI6MTcxODE0NTg1NCwibmJmIjoxNzE4MTQyMjU0LCJqdGkiOiI4WktxSnRqUkdhdE9teTFwIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DwdR5um6ue_OqTV3kQpFVZx0ChUj0_LMFn2p6h5jtJk"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxMjQwODAsImV4cCI6MTcxODEyNzY4MCwibmJmIjoxNzE4MTI0MDgwLCJqdGkiOiJCZktKQ3NYVDJVSVliTG1YIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PqMQfAmY0GYwyuA_J-mQi0FG5iCwaECqM2R1eLLHtp0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTgxMjQwODAsImV4cCI6MTcxODEyNzY4MCwibmJmIjoxNzE4MTI0MDgwLCJqdGkiOiJCZktKQ3NYVDJVSVliTG1YIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.PqMQfAmY0GYwyuA_J-mQi0FG5iCwaECqM2R1eLLHtp0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api_Products",
+			"item": [
+				{
+					"name": "Register a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/login?email=sara@example.com&password=secret",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "sara@example.com"
+								},
+								{
+									"key": "password",
+									"value": "secret"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c2dd681d856208ed0cf1589b8cf46408f0f74ff777c1664441b65ce133451a66",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Product 45",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "desc2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "99.99",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Eng Mahmoud/Desktop/logo.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c2dd681d856208ed0cf1589b8cf46408f0f74ff777c1664441b65ce133451a66",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c2dd681d856208ed0cf1589b8cf46408f0f74ff777c1664441b65ce133451a66",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/products/41",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c2dd681d856208ed0cf1589b8cf46408f0f74ff777c1664441b65ce133451a66",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Updated Product2",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is an updated product2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "89.992",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Eng Mahmoud/Desktop/photo-1020478.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/products/40",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "c2dd681d856208ed0cf1589b8cf46408f0f74ff777c1664441b65ce133451a66",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/products/38",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"38"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
